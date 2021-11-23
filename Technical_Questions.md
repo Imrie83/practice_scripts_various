@@ -50,7 +50,7 @@ class MyClass:
 MyClass._MyClass__private
 ```
 
-# sort() i sorted():
+## sort() i sorted():
 sorted() to funkcja, która przyjmuje listę jako parametr i zwraca posortowaną listę.
 ```python
 >>> a = [1, 75, 234, 34, 2, 87]
@@ -111,7 +111,7 @@ for i in power():
         break
 ```
 
-# Czy funkcja musi zwracać wynik:
+## Czy funkcja musi zwracać wynik:
 Tak, funkcja zawsze zwróci wynik, choć instrukcja ```return``` nie jest wymagana.
 W przypadku braku instrukcji ```return``` funkcja zwróci ```None```
 
@@ -128,18 +128,18 @@ class MyClass:
         self.instance_attr = 'To jest zmienna obiektu'
 ```
 
-# Nazwa aktualnie wykonywanego modułu:
+## Nazwa aktualnie wykonywanego modułu:
 Aby pobrać nazwę aktualnie wykonywanego modułu, należy użyć magicznej metody ```__name__```, Python umieszcza tam nazwę
 aktualnego modułu. Nie działa to jednak w linii komend, ponieważ zwróci tam zawsze ```__main__```
 
-# Do czego używamy ```__init__.py```:
+## Do czego używamy ```__init__.py```:
 Plik ```__init__.py``` sprawia, że python traktuje dany folder jako zawierający pakiety. Plik ten może być pusty,
 ale musi istnieć w katalogu.
 
-# Co robi instrukcja ```pass```:
+## Co robi instrukcja ```pass```:
 Instrukcja ```pass``` nie robi niczego.
 W pythonie blok kodu nie może pozostać pusty, w związku z czym używamy instrukcji pass do wypełnienia bloku kodu,
 który chcemy dokończyć później lub po prostu zostawić pusty.
 
-# Co to jest PEP-8:
+## Co to jest PEP-8:
 PEP-8 to dokument opisujący standard kodowania w Python np. ilość linii między klasami, zasady nazewnictwa klas, funckji itd.
