@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    {% if details %}
+        <h2>{{details.author}}</h2>
+        <h3>{{details.date_added}}</h3>
+        <p>{{details.content}}</p>
+    {% endif %}
+</body>
+</html>
