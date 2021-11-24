@@ -45,5 +45,29 @@ def flatten(my_list):
 
 lista = list(flatten(lista))
 print(lista)
+```
 
+## Depth First Search:
+```python
+graph = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : []
+}
+
+visited = set()
+
+
+def dfs(visited, graph, node):
+    if node not in visited:
+        print(node)
+        visited.add(node)
+        for next in graph[node]:
+            dfs(visited, graph, next)
+
+
+dfs(visited, graph, 'A')
 ```
