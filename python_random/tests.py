@@ -47,3 +47,7 @@ def test_find_val_by_index():
 def test_find_index():
     assert ll.find_index(a, 'C') == 2
     assert ll.find_index(a, 'E') == None
+
+
+def test_reverse_list()
+    assert ll.reverse_list(a) == 'D'

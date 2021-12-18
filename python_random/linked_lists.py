@@ -121,6 +121,17 @@ def find_index(head, value):
 
 # DESC: reverse linked list and return new head.
 # iterative
+def reverse_list(head):
+    prev = None
+    current = head
+
+    while head is not None:
+        next_val = current.next
+        current.next = prev
+        prev = current
+        current = next_val
+    return prev
+
 
 end = datetime.now() - start
 # print(print_link_list(a))
