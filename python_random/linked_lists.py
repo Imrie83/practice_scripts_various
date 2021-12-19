@@ -18,9 +18,14 @@ b = Node('B')
 c = Node('C')
 d = Node('D')
 
+e = Node('E')
+f = Node('F')
+
 a.next = b
 b.next = c
 c.next = d
+
+e.next = f
 
 #   A -> B -> C -> D -> None
 start = datetime.now()
@@ -119,18 +124,39 @@ def find_index(head, value):
         count += 1
     return None
 
+
 # DESC: reverse linked list and return new head.
 # iterative
-def reverse_list(head):
-    prev = None
-    current = head
+# def reverse_list(head):
+#     prev = None
+#     current = head
+#     while current is not None:
+#         next_val = current.next
+#         current.next = prev
+#         prev = current
+#         current = next_val
+#     return prev.val
 
-    while head is not None:
-        next_val = current.next
-        current.next = prev
-        prev = current
-        current = next_val
-    return prev
+
+# recursive
+def reverse_list(head, prev=None):
+    if head is None:
+        return prev
+    next_val = head.next
+    head.next = prev
+    return reverse_list(next_val, head)
+
+
+# DESC: zipper list
+# iterative
+def zipper_list(head, head2):
+    count = 0
+    while True:
+        if count % 2:
+            head = head.next
+            count += 1
+
+
 
 
 end = datetime.now() - start
