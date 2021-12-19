@@ -4,9 +4,16 @@ a = ll.Node('A')
 b = ll.Node('B')
 c = ll.Node('C')
 d = ll.Node('D')
+
+i = ll.Node('I')
+j = ll.Node('J')
+
 a.next = b
 b.next = c
 c.next = d
+
+i.next = j
+
 
 e = ll.Node(2)
 f = ll.Node(4)
@@ -52,4 +59,8 @@ def test_find_index():
 def test_reverse_list():
     output = ll.reverse_list(a)
     assert output.val == 'D'
+
+
+def test_zipper_list():
+    assert ll.zipper_list(a, i).val == 'A'
 

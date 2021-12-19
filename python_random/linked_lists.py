@@ -18,14 +18,14 @@ b = Node('B')
 c = Node('C')
 d = Node('D')
 
-e = Node('E')
-f = Node('F')
+i = Node('I')
+j = Node('J')
 
 a.next = b
 b.next = c
 c.next = d
 
-e.next = f
+i.next = j
 
 #   A -> B -> C -> D -> None
 start = datetime.now()
@@ -149,12 +149,28 @@ def reverse_list(head, prev=None):
 
 # DESC: zipper list
 # iterative
-def zipper_list(head, head2):
+def zipper_list(head1, head2):
     count = 0
-    while True:
-        if count % 2:
-            head = head.next
-            count += 1
+    tail = head1
+    current1 = head1.next
+    current2 = head2
+    while current1 is not None and current2 is not None:
+        if count % 2 == 0:
+            tail.next = current2
+            current2 = current2.next
+        else:
+            tail.next = current1
+            current1 = current1.next
+        tail = tail.next
+        count += 1
+
+        if current1 != None:
+            tail.next = current1
+        if current2 != None:
+            tail.next = current2
+
+    return head1
+
 
 
 
@@ -163,7 +179,8 @@ end = datetime.now() - start
 # print(print_link_list(a))
 # print(sum_linked_list(e))
 # print(f'Sum of list elements = {sum_linked_list(a)}')
-print(find_value(a, 'E'))
-print(find_value(a, 'C'))
-print(find_index(a, 'B'))
+# print(find_value(a, 'E'))
+# print(find_value(a, 'C'))
+# print(find_index(a, 'B'))
+print(zipper_list(a, i).val)
 print(end)
