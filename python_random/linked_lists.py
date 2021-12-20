@@ -13,13 +13,13 @@ f = Node(4)
 g = Node(6)
 h = Node(8)
 
-a = Node('A')
-b = Node('B')
-c = Node('C')
-d = Node('D')
+a = Node("A")
+b = Node("B")
+c = Node("C")
+d = Node("D")
 
-i = Node('I')
-j = Node('J')
+i = Node("I")
+j = Node("J")
 
 a.next = b
 b.next = c
@@ -170,9 +170,6 @@ def zipper_list(head1, head2):
             tail.next = current2
 
     return head1
-
-
-
 
 
 end = datetime.now() - start

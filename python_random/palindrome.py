@@ -1,7 +1,7 @@
-my_string = 'taco cat'
-my_string_2 = 'kajak'
-my_string_3 = 'taco, cat.'
-my_string_4 = '?kajak!'
+my_string = "taco cat"
+my_string_2 = "kajak"
+my_string_3 = "taco, cat."
+my_string_4 = "?kajak!"
 
 
 # palindrom recursive
@@ -33,9 +33,9 @@ print(palindrom_2(my_string_2))
 
 # ignore punctuation
 def palindrom_3(stri):
-    punctuation = ['.', ',', '!', '?']
+    punctuation = [".", ",", "!", "?"]
     for punk in punctuation:
-        stri = stri.replace(punk, '')
+        stri = stri.replace(punk, "")
     if len(stri) <= 1:
         return True
     elif stri[0] != stri[-1]:

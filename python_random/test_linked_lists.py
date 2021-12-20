@@ -1,12 +1,12 @@
 import linked_lists as ll
 
-a = ll.Node('A')
-b = ll.Node('B')
-c = ll.Node('C')
-d = ll.Node('D')
+a = ll.Node("A")
+b = ll.Node("B")
+c = ll.Node("C")
+d = ll.Node("D")
 
-i = ll.Node('I')
-j = ll.Node('J')
+i = ll.Node("I")
+j = ll.Node("J")
 
 a.next = b
 b.next = c
@@ -26,10 +26,10 @@ arr = []
 
 
 def test_linked_list():
-    assert ll.print_link_list(a) == ['A', 'B', 'C', 'D']
-    assert ll.print_link_list(b) == ['B', 'C', 'D']
-    assert ll.print_link_list(c) == ['C', 'D']
-    assert ll.print_link_list(d) == ['D']
+    assert ll.print_link_list(a) == ["A", "B", "C", "D"]
+    assert ll.print_link_list(b) == ["B", "C", "D"]
+    assert ll.print_link_list(c) == ["C", "D"]
+    assert ll.print_link_list(d) == ["D"]
 
 
 def test_sum_list():
@@ -40,27 +40,26 @@ def test_sum_list():
 
 
 def test_find_value():
-    assert ll.find_value(a, 'C') is True
+    assert ll.find_value(a, "C") is True
     assert ll.find_value(f, 6) is True
-    assert ll.find_value(c, 'A') is False
+    assert ll.find_value(c, "A") is False
     assert ll.find_value(e, 11) is False
 
 
 def test_find_val_by_index():
-    assert ll.find_val_by_index(a, 2) == 'C'
+    assert ll.find_val_by_index(a, 2) == "C"
     assert ll.find_val_by_index(a, 5) == None
 
 
 def test_find_index():
-    assert ll.find_index(a, 'C') == 2
-    assert ll.find_index(a, 'E') == None
+    assert ll.find_index(a, "C") == 2
+    assert ll.find_index(a, "E") == None
 
 
 def test_reverse_list():
     output = ll.reverse_list(a)
-    assert output.val == 'D'
+    assert output.val == "D"
 
 
 def test_zipper_list():
-    assert ll.zipper_list(a, i).val == 'A'
-
+    assert ll.zipper_list(a, i).val == "A"
